@@ -1,0 +1,207 @@
+{
+  "view": {
+    "control_type": "row",
+    "id": "content_row",
+    "is_visible": true,
+    "style": "default",
+    "justify": {
+      "xs": "center",
+      "sm": "center",
+      "md": "center",
+      "lg": "center",
+      "xl": "center",
+      "xxl": "center"
+    },
+    "children": [
+      {
+        "control_type": "col",
+        "is_visible": true,
+        "style": "default",
+        "span": {
+          "xs": 8,
+          "sm": 8,
+          "md": 8,
+          "lg": 8,
+          "xl": 8,
+          "xxl": 8
+        },
+        "children": [
+          {
+            "control_type": "form",
+            "id": "registration_form",
+            "is_visible": true,
+            "style": "default",
+            "children": [
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/firstname",
+                "value": null,
+                "label": "Имя",
+                "label_position": "left",
+                "control_kind": "text",
+                "control_type": "input",
+                "id": "firstname",
+                "is_visible": true,
+                "state": "required",
+                "style": "default",
+                "text": "",
+                "placeholder": "Введите ваше имя"
+              },
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/lastname",
+                "value": null,
+                "label": "Фамилия",
+                "label_position": "left",
+                "control_kind": "text",
+                "control_type": "input",
+                "id": "lastname",
+                "is_visible": true,
+                "state": "required",
+                "style": "default",
+                "text": "",
+                "placeholder": "Введите вашу фамилию"
+              },
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/middlename",
+                "value": null,
+                "label": "Отчество",
+                "label_position": "left",
+                "control_kind": "text",
+                "control_type": "input",
+                "id": "middlename",
+                "is_visible": true,
+                "state": "required",
+                "style": "default",
+                "text": "",
+                "placeholder": "Введите ваше отчество"
+              },
+              {
+                "value_selection_kind": "fetch",
+                "value_selection_url": "/api/v1/value_selection/gender",
+                "put_value_url": "/api/v1/put_value/gender",
+                "value": null,
+                "label": "Пол",
+                "label_position": "left",
+                "control_type": "select",
+                "id": "gender",
+                "is_visible": true,
+                "state": "required",
+                "style": "default",
+                "text": "",
+                "placeholder": "Укажите ваш пол"
+              },
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/date_of_birth",
+                "value": null,
+                "label": "Дата рождения",
+                "label_position": "left",
+                "control_kind": "date_time",
+                "control_type": "datepicker",
+                "id": "date_of_birth",
+                "is_visible": true,
+                "state": "required",
+                "style": "default",
+                "text": "",
+                "placeholder": "Введите дату рождения"
+              },
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/experience",
+                "value": null,
+                "label": "Стаж",
+                "label_position": "left",
+                "control_kind": "number",
+                "control_type": "input",
+                "id": "experience",
+                "is_visible": true,
+                "state": "disabled",
+                "style": "default",
+                "text": "",
+                "placeholder": "Укажите ваш стаж"
+              },
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/email",
+                "value": null,
+                "label": "Email",
+                "label_position": "left",
+                "control_kind": "email",
+                "control_type": "input",
+                "id": "email",
+                "is_visible": true,
+                "state": "required",
+                "style": "default",
+                "text": "",
+                "placeholder": "Введите ваш email"
+              },
+              {
+                "value_selection_kind": "none",
+                "put_value_url": "/api/v1/put_value/comment",
+                "method": "put",
+                "value": null,
+                "label": "Комментарий",
+                "label_position": "left",
+                "control_kind": "text",
+                "control_type": "textarea",
+                "id": "comment",
+                "is_visible": true,
+                "state": "optional",
+                "style": "default",
+                "text": "",
+                "placeholder": "Комментарий"
+              },
+              {
+                "control_kind": "row",
+                "id": "form_actions_row",
+                "is_visible": true,
+                "style": "default",
+                "justify": {
+                  "xs": "center",
+                  "sm": "center",
+                  "md": "center",
+                  "lg": "center",
+                  "xl": "center",
+                  "xxl": "center"
+                },
+                "children": [
+                  {
+                    "control_type": "col",
+                    "is_visible": true,
+                    "style": "default",
+                    "children": [
+                      {
+                        "action_kind": "send",
+                        "name": "Отправить",
+                        "action_url": "/api/v1/send",
+                        "method": "post",
+                        "disabled": false,
+                        "control_type": "button",
+                        "id": "Button_1",
+                        "is_visible": true,
+                        "style": "primary"
+                      },
+                      {
+                        "action_kind": "rollback",
+                        "name": "Отмена",
+                        "action_url": "/api/v1/rollback",
+                        "method": "delete",
+                        "disabled": false,
+                        "control_type": "button",
+                        "id": "Button_2",
+                        "is_visible": true,
+                        "style": "danger"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
